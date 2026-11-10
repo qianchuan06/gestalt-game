@@ -76,21 +76,6 @@ const artwork = {
     palette: ['#ffdf85','#bd7444'], scene: 'table',
     detail: '<path d="M-87 -134H87M-91 121H91M-53 98H53" stroke="#fff0b1" stroke-width="8" fill="none"/><path d="M-71 -117Q-61 -24 -23 -8" stroke="#fff3c1" stroke-width="12" fill="none" stroke-linecap="round"/><path d="M9 -104l15 30 33 5-24 24 5 32L9 -29l-29 16 5-32-24-24 33-5Z" fill="#f9bd5e" stroke="#b77942" stroke-width="3"/>'
   },
-  '侧脸': {
-    outline: 'M-85 59C-98 22 -101 -28 -83 -65C-62 -106 -29 -129 14 -122Q57 -117 64 -84Q69 -66 62 -49Q65 -32 88 -13Q102 -2 89 7L69 12Q64 17 72 23Q79 31 67 38Q62 40 69 46Q75 52 67 59Q62 64 63 75Q64 94 45 103Q28 111 9 104L5 126H-93Q-73 100 -85 59Z',
-    palette: ['#efc39d','#b57263'], scene: 'table',
-    detail: '<path d="M-105 -130H21Q47 -110 37 -94Q22 -84 18 -55Q11 -24 -19 -15Q-24 7 -7 30Q-14 55 -33 83L-57 127H-101Z" fill="#77586a"/><path d="M-79 -49Q-60 -102 -13 -110M-82 -19Q-64 -57 -31 -68M-75 28Q-62 -18 -36 -34" fill="none" stroke="#ce9587" stroke-width="5" stroke-linecap="round"/><path d="M39 -51q10-9 23-3m-25 12q11 7 21 1m-2 74 14 1" fill="none" stroke="#754d53" stroke-width="3" stroke-linecap="round"/><circle cx="-23" cy="39" r="7" fill="#f5d397"/>'
-  },
-  '燕子': {
-    outline: 'M-178 -95C-133 -92 -97 -75 -62 -45Q-25 -14 -4 -14Q9 -45 37 -44Q58 -44 71 -31L96 -27L73 -15Q62 8 43 18Q65 23 96 10Q139 -11 177 -53Q176 -19 149 17Q121 54 84 58Q33 67 -5 42L-40 57L-111 117L-95 66L-150 90L-114 42Q-91 12 -120 -7Q-164 -34 -178 -95Z',
-    palette: ['#9fbcca','#3d506e'], scene: 'sky',
-    detail: '<path d="M-123 -9Q-67 10 -23 11Q13 15 45 17Q22 38 -5 42L-37 55Q-69 43 -80 27Z" fill="#f2ddba"/><path d="M10 -24Q34 -35 62 -21Q50 -5 24 -3Z" fill="#be7969"/><circle cx="53" cy="-28" r="4" fill="#28384f"/><path d="M-158 -72Q-118 -48 -93 -23M-147 -54Q-110 -32 -88 -9M-133 -33Q-107 -16 -81 4M147 -13Q125 15 92 25M128 17Q102 40 71 42" fill="none" stroke="#d2e1d8" stroke-width="5" stroke-linecap="round"/>'
-  },
-  '松树': {
-    outline: 'M0 -150Q32 -102 64 -78L37 -76Q78 -43 100 -23L62 -21Q101 12 134 38L92 42Q125 69 159 93Q111 102 21 95L21 149H-21V95Q-111 102 -159 93Q-125 69 -92 42L-134 38Q-101 12 -62 -21L-100 -23Q-78 -43 -37 -76L-64 -78Q-32 -102 0 -150Z',
-    palette: ['#a3c0a0','#356f68'], scene: 'snow',
-    detail: '<path d="M-24 94H24V155H-24Z" fill="#88685f"/><path d="M-54 -74Q0 -60 54 -74M-89 -22Q0 -2 89 -22M-115 39Q0 61 115 39M-145 92Q0 111 145 92" stroke="#e5e7c9" stroke-width="8" fill="none" stroke-linecap="round"/><path d="M0 -133V84M-4 -74l-26-9m33 48 31-14m-39 56-38-13m47 53 51-17" stroke="#c1d5af" stroke-width="4" fill="none" stroke-linecap="round" opacity=".72"/>'
-  },
   '冰淇淋': {
     outline: 'M0 165Q-6 170 -11 157L-71 11Q-109 9 -108 -22Q-109 -43 -88 -53C-88 -108 -54 -148 0 -148C54 -148 88 -108 88 -53Q109 -43 108 -22Q109 9 71 11L11 157Q6 170 0 165Z',
     palette: ['#ffdcb6','#c58a58'], scene: 'table',

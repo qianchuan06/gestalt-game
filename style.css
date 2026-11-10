@@ -4,7 +4,7 @@
 
 .dots {
   display: grid;
-  grid-template-columns: repeat(10, 24px);
+  grid-template-columns: repeat(var(--question-count, 10), 24px);
 }
 .gallery .complete-art {
   display: block;
