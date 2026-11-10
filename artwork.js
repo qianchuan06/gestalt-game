@@ -76,26 +76,15 @@ const artwork = {
     palette: ['#ffdf85','#bd7444'], scene: 'table',
     detail: '<path d="M-87 -134H87M-91 121H91M-53 98H53" stroke="#fff0b1" stroke-width="8" fill="none"/><path d="M-71 -117Q-61 -24 -23 -8" stroke="#fff3c1" stroke-width="12" fill="none" stroke-linecap="round"/><path d="M9 -104l15 30 33 5-24 24 5 32L9 -29l-29 16 5-32-24-24 33-5Z" fill="#f9bd5e" stroke="#b77942" stroke-width="3"/>'
   },
-  '钥匙': {
-    outline: 'M0 -159A76 76 0 0 1 26 -12V35H60V63H26V87H49V116H26V155H-22V-12A76 76 0 0 1 0 -159Z M0 -133A48 48 0 1 0 0 -37A48 48 0 1 0 0 -133Z',
-    palette: ['#efd18d','#a36642'], scene: 'table',
-    detail: '<path d="M-7 -149A65 65 0 0 0 -51 -43M-9 2V139M36 45H54" fill="none" stroke="#fff2bd" stroke-width="6" stroke-linecap="round"/><path d="M14 -15V155" stroke="#886248" opacity=".5" stroke-width="4"/>'
+  '小鱼': {
+    outline: 'M-75 -13Q-113 -40 -151 -50Q-158 -28 -132 0Q-156 25 -151 48Q-107 39 -75 14C-47 51 31 63 80 37Q117 22 139 2Q139 -8 115 -22Q74 -49 25 -43L-9 -66L-41 -42Q-57 -34 -75 -13Z',
+    palette: ['#f7da8a','#b35d51'], scene: 'water',
+    detail: '<path d="M-142 -34L-82 -4L-143 34M-41 -35L-10 -59L15 -40M-38 22q35 11 64 -4q-25 31-62 24M66 -36q-18 43 7 76" fill="none" stroke="#ffedaf" stroke-width="6" stroke-linecap="round"/><path d="M87 15q21 5 39-6" fill="none" stroke="#8d514f" stroke-width="4" stroke-linecap="round"/><circle cx="96" cy="-9" r="6.5" fill="#423d48"/><circle cx="98" cy="-11" r="2" fill="#fff3ca"/><path d="M-44 -17q16-7 26 6m0-17q17-7 27 7m-3 21q16-7 26 6m-8-29q17-7 27 7" stroke="#af6d59" stroke-width="3" fill="none" stroke-linecap="round"/>'
   },
-  '火箭': {
-    outline: 'M0 -163C61 -117 74 -32 60 27L97 79L101 140L49 110H26L37 153H-37L-26 110H-49L-101 140L-97 79L-60 27C-74 -32 -61 -117 0 -163Z',
-    palette: ['#f8eedb','#8199a9'], scene: 'night',
-    detail: '<path d="M-73 -103Q0 -83 73 -103V-175H-73Z M-100 77L-56 26L-37 111L-105 142Z M100 77L56 26L37 111L105 142Z" fill="#bc6256"/><circle cy="-40" r="26" fill="#4d7289" stroke="#f8db9b" stroke-width="7"/><path d="M-22 120H22M-27 136H27" stroke="#4a5f76" stroke-width="8"/>',
-    outside: '<path d="M-20 158Q-26 179 0 207Q26 179 20 158Z" fill="#f3a864"/><path d="M-10 158Q-12 177 0 190Q12 177 10 158Z" fill="#fff0b8"/>'
-  },
-  '小猫': {
-    outline: 'M-79 147Q-110 140 -109 97Q-105 46 -83 19Q-119 -1 -111 -47L-113 -130Q-112 -143 -100 -135L-54 -98Q-22 -111 7 -96L52 -134Q67 -146 68 -128L67 -57Q84 -9 44 16Q67 45 67 101Q112 125 127 76Q141 29 113 12Q98 3 105 -12Q110 -25 126 -20Q181 0 160 79Q141 152 65 147Z',
-    palette: ['#f5bb79','#ae6b52'], scene: 'table',
-    detail: '<path d="M-103 -115L-72 -92L-99 -75Z M55 -115L26 -92L56 -76Z" fill="#d57e77"/><ellipse cx="-21" cy="58" rx="49" ry="65" fill="#ffe5ac"/><path d="M-81 -35q13 -12 26 0m50 0q13 -12 26 0m-53 14 8 8 8-8m-8 8v9m0 0q-9 10-17 4m17-4q9 10 17 4" fill="none" stroke="#684b4e" stroke-width="5" stroke-linecap="round"/><path d="M-69 -11l-36-8m36 17-37 8m123-17 36-8m-36 17 37 8M-56 115v32m65-32v32" stroke="#a96957" stroke-width="3.5" stroke-linecap="round" fill="none"/>'
-  },
-  '灯塔': {
-    outline: 'M0 -159L93 -103V-86H69V-33H91V-11H57L81 114H106V146H-106V114H-81L-57 -11H-91V-33H-69V-86H-93V-103Z',
-    palette: ['#fbecd2','#c2a890'], scene: 'water',
-    detail: '<path d="M-99 -157H99V-97H-99ZM-81 25H81V58H-81ZM-97 92H97V118H-97Z" fill="#b75e55"/><rect x="-54" y="-86" width="108" height="54" rx="3" fill="#ffe092"/><path d="M-17 -86V-33M17 -86V-33" stroke="#5e7381" stroke-width="6"/><path d="M-19 115V88A19 19 0 0 1 19 88V115Z" fill="#596e78"/><path d="M-57 124H57" stroke="#e4b989" stroke-width="5"/>'
+  '小鸭': {
+    outline: 'M-114 -1Q-119 -14 -109 -19Q-97 -25 -87 -11Q-49 5 -17 -9Q-6 -16 -8 -33Q-12 -62 8 -78Q29 -96 53 -81Q73 -70 76 -51L114 -43Q125 -37 115 -27Q99 -14 71 -18Q63 -8 49 -6Q77 8 71 27Q58 57 13 60Q-61 65 -95 34Q-110 18 -114 -1Z',
+    palette: ['#ffed9c','#e09a52'], scene: 'water',
+    detail: '<path d="M68 -51L120 -45L128 -33Q104 -13 69 -18Q61 -34 68 -51Z" fill="#dc7750"/><path d="M75 -35Q97 -28 117 -35" stroke="#a95547" stroke-width="3" fill="none"/><circle cx="48" cy="-54" r="6.5" fill="#51464a"/><circle cx="50" cy="-56" r="2" fill="#fff4d1"/><path d="M-79 16Q-38 -3 10 9Q19 12 13 21Q-7 47 -40 39Q-63 33 -79 16Z" fill="#f2c66c" stroke="#f8dc8a" stroke-width="5"/><path d="M4 -58Q10 -73 26 -77" stroke="#fff4ba" stroke-width="6" fill="none" stroke-linecap="round"/>'
   },
   '冰淇淋': {
     outline: 'M0 165Q-6 170 -11 157L-71 11Q-109 9 -108 -22Q-109 -43 -88 -53C-88 -108 -54 -148 0 -148C54 -148 88 -108 88 -53Q109 -43 108 -22Q109 9 71 11L11 157Q6 170 0 165Z',
@@ -206,13 +195,14 @@ function artworkMarkup(name, {id, outline, y = 280, scale = 1, height = 560} = {
 }
 
 function figurePuzzleMarkup(figure) {
-  const {answer, frame, marks, mirror} = figure;
+  const {answer, frame, marks, mirror, cutout = {}} = figure;
+  const {x = 400, y = 280, scale = 1, angle = 0} = cutout;
   const foreground = `<path d="${frame}" fill="#283f46"/><g fill="#f3ead4">${marks}</g>`;
-  return `<svg class="figimage" viewBox="0 0 800 560" role="img" aria-label="图底关系谜题，观察深色剪影围出的浅色形状">
+  return `<svg class="figimage" viewBox="0 0 800 560" role="img" aria-label="图底关系谜题，观察深色剪影里的浅色形状">
     <defs>
       <mask id="figure-cutout">
         <rect width="800" height="560" fill="white"/>
-        <path d="${artwork[answer].outline}" transform="translate(400 280)" fill="black" fill-rule="evenodd"/>
+        <path d="${artwork[answer].outline}" transform="translate(${x} ${y}) rotate(${angle}) scale(${scale})" fill="black" fill-rule="evenodd"/>
       </mask>
     </defs>
     <rect width="800" height="560" fill="#f3ead4"/>
