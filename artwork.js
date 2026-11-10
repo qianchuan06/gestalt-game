@@ -76,20 +76,20 @@ const artwork = {
     palette: ['#ffdf85','#bd7444'], scene: 'table',
     detail: '<path d="M-87 -134H87M-91 121H91M-53 98H53" stroke="#fff0b1" stroke-width="8" fill="none"/><path d="M-71 -117Q-61 -24 -23 -8" stroke="#fff3c1" stroke-width="12" fill="none" stroke-linecap="round"/><path d="M9 -104l15 30 33 5-24 24 5 32L9 -29l-29 16 5-32-24-24 33-5Z" fill="#f9bd5e" stroke="#b77942" stroke-width="3"/>'
   },
-  '侧卧兔': {
-    outline: 'M-96 50Q-107 40 -90 28L-82 22Q-100 12 -99 -2Q-99 -15 -82 -20L-64 -26Q-70 -45 -90 -66Q-105 -82 -98 -92Q-91 -101 -76 -92Q-55 -77 -46 -43Q-49 -73 -40 -96Q-33 -113 -22 -105Q-10 -97 -17 -68L-18 -37Q5 -39 23 -23Q58 -24 81 -4Q102 12 89 38Q107 30 120 40Q133 54 116 63Q102 70 85 61Q65 75 35 76H-72Q-96 75 -96 64Z',
-    palette: ['#f3e4d0','#aa8273'], scene: 'garden',
-    detail: '<path d="M-89 -87Q-71 -81 -55 -40Q-74 -58 -89 -87Z M-27 -97Q-20 -81 -34 -43Q-39 -67 -27 -97Z" fill="#d79394"/><path d="M-78 43Q-24 24 25 51Q58 61 78 49L82 77H-91Z" fill="#fae8ce"/><circle cx="-70" cy="-7" r="5.5" fill="#584849"/><path d="M-98 5l12 1-7 6z" fill="#ba7c7c"/><path d="M-90 15q8 10 22 4m74 14q21-13 41 1m-87 20q12-11 26-6" stroke="#8d695e" stroke-width="4" fill="none" stroke-linecap="round"/><ellipse cx="109" cy="50" rx="16" ry="14" fill="#f6e7ce"/>'
+  '侧脸': {
+    outline: 'M-85 59C-98 22 -101 -28 -83 -65C-62 -106 -29 -129 14 -122Q57 -117 64 -84Q69 -66 62 -49Q65 -32 88 -13Q102 -2 89 7L69 12Q64 17 72 23Q79 31 67 38Q62 40 69 46Q75 52 67 59Q62 64 63 75Q64 94 45 103Q28 111 9 104L5 126H-93Q-73 100 -85 59Z',
+    palette: ['#efc39d','#b57263'], scene: 'table',
+    detail: '<path d="M-105 -130H21Q47 -110 37 -94Q22 -84 18 -55Q11 -24 -19 -15Q-24 7 -7 30Q-14 55 -33 83L-57 127H-101Z" fill="#77586a"/><path d="M-79 -49Q-60 -102 -13 -110M-82 -19Q-64 -57 -31 -68M-75 28Q-62 -18 -36 -34" fill="none" stroke="#ce9587" stroke-width="5" stroke-linecap="round"/><path d="M39 -51q10-9 23-3m-25 12q11 7 21 1m-2 74 14 1" fill="none" stroke="#754d53" stroke-width="3" stroke-linecap="round"/><circle cx="-23" cy="39" r="7" fill="#f5d397"/>'
   },
-  '小鱼': {
-    outline: 'M-75 -13Q-113 -40 -151 -50Q-158 -28 -132 0Q-156 25 -151 48Q-107 39 -75 14C-47 51 31 63 80 37Q117 22 139 2Q139 -8 115 -22Q74 -49 25 -43L-9 -66L-41 -42Q-57 -34 -75 -13Z',
-    palette: ['#f7da8a','#b35d51'], scene: 'water',
-    detail: '<path d="M-142 -34L-82 -4L-143 34M-41 -35L-10 -59L15 -40M-38 22q35 11 64 -4q-25 31-62 24M66 -36q-18 43 7 76" fill="none" stroke="#ffedaf" stroke-width="6" stroke-linecap="round"/><path d="M87 15q21 5 39-6" fill="none" stroke="#8d514f" stroke-width="4" stroke-linecap="round"/><circle cx="96" cy="-9" r="6.5" fill="#423d48"/><circle cx="98" cy="-11" r="2" fill="#fff3ca"/><path d="M-44 -17q16-7 26 6m0-17q17-7 27 7m-3 21q16-7 26 6m-8-29q17-7 27 7" stroke="#af6d59" stroke-width="3" fill="none" stroke-linecap="round"/>'
+  '燕子': {
+    outline: 'M-178 -95C-133 -92 -97 -75 -62 -45Q-25 -14 -4 -14Q9 -45 37 -44Q58 -44 71 -31L96 -27L73 -15Q62 8 43 18Q65 23 96 10Q139 -11 177 -53Q176 -19 149 17Q121 54 84 58Q33 67 -5 42L-40 57L-111 117L-95 66L-150 90L-114 42Q-91 12 -120 -7Q-164 -34 -178 -95Z',
+    palette: ['#9fbcca','#3d506e'], scene: 'sky',
+    detail: '<path d="M-123 -9Q-67 10 -23 11Q13 15 45 17Q22 38 -5 42L-37 55Q-69 43 -80 27Z" fill="#f2ddba"/><path d="M10 -24Q34 -35 62 -21Q50 -5 24 -3Z" fill="#be7969"/><circle cx="53" cy="-28" r="4" fill="#28384f"/><path d="M-158 -72Q-118 -48 -93 -23M-147 -54Q-110 -32 -88 -9M-133 -33Q-107 -16 -81 4M147 -13Q125 15 92 25M128 17Q102 40 71 42" fill="none" stroke="#d2e1d8" stroke-width="5" stroke-linecap="round"/>'
   },
-  '小鸭': {
-    outline: 'M-114 -1Q-119 -14 -109 -19Q-97 -25 -87 -11Q-49 5 -17 -9Q-6 -16 -8 -33Q-12 -62 8 -78Q29 -96 53 -81Q73 -70 76 -51L114 -43Q125 -37 115 -27Q99 -14 71 -18Q63 -8 49 -6Q77 8 71 27Q58 57 13 60Q-61 65 -95 34Q-110 18 -114 -1Z',
-    palette: ['#ffed9c','#e09a52'], scene: 'water',
-    detail: '<path d="M68 -51L120 -45L128 -33Q104 -13 69 -18Q61 -34 68 -51Z" fill="#dc7750"/><path d="M75 -35Q97 -28 117 -35" stroke="#a95547" stroke-width="3" fill="none"/><circle cx="48" cy="-54" r="6.5" fill="#51464a"/><circle cx="50" cy="-56" r="2" fill="#fff4d1"/><path d="M-79 16Q-38 -3 10 9Q19 12 13 21Q-7 47 -40 39Q-63 33 -79 16Z" fill="#f2c66c" stroke="#f8dc8a" stroke-width="5"/><path d="M4 -58Q10 -73 26 -77" stroke="#fff4ba" stroke-width="6" fill="none" stroke-linecap="round"/>'
+  '松树': {
+    outline: 'M0 -150Q32 -102 64 -78L37 -76Q78 -43 100 -23L62 -21Q101 12 134 38L92 42Q125 69 159 93Q111 102 21 95L21 149H-21V95Q-111 102 -159 93Q-125 69 -92 42L-134 38Q-101 12 -62 -21L-100 -23Q-78 -43 -37 -76L-64 -78Q-32 -102 0 -150Z',
+    palette: ['#a3c0a0','#356f68'], scene: 'snow',
+    detail: '<path d="M-24 94H24V155H-24Z" fill="#88685f"/><path d="M-54 -74Q0 -60 54 -74M-89 -22Q0 -2 89 -22M-115 39Q0 61 115 39M-145 92Q0 111 145 92" stroke="#e5e7c9" stroke-width="8" fill="none" stroke-linecap="round"/><path d="M0 -133V84M-4 -74l-26-9m33 48 31-14m-39 56-38-13m47 53 51-17" stroke="#c1d5af" stroke-width="4" fill="none" stroke-linecap="round" opacity=".72"/>'
   },
   '冰淇淋': {
     outline: 'M0 165Q-6 170 -11 157L-71 11Q-109 9 -108 -22Q-109 -43 -88 -53C-88 -108 -54 -148 0 -148C54 -148 88 -108 88 -53Q109 -43 108 -22Q109 9 71 11L11 157Q6 170 0 165Z',
@@ -176,12 +176,12 @@ function sceneDetails(scene) {
   return '<g fill="#fff4d2" opacity=".75"><path d="M68 178Q91 145 122 163Q151 113 190 159Q230 158 238 178Z"/><path d="M562 195Q600 160 623 178Q653 131 690 176Q733 168 747 195Z"/></g><path d="M0 458L166 330L326 458L487 388L650 455L800 369V560H0Z" fill="#6b98a5" opacity=".63"/><path d="M0 504Q186 429 377 496T800 462V560H0Z" fill="#668e83"/>';
 }
 
-function artworkMarkup(name, {id, outline, y = 280, scale = 1, height = 560, label = name} = {}) {
+function artworkMarkup(name, {id, outline, y = 280, scale = 1, height = 560} = {}) {
   const subject = artwork[name];
   const path = outline || subject.outline;
   const [sky, ground, glow] = scenes[subject.scene];
   const [light, dark] = subject.palette;
-  return `<svg class="complete-art" viewBox="0 0 800 ${height}" role="img" aria-label="${label}的完整图像">
+  return `<svg class="complete-art" viewBox="0 0 800 ${height}" role="img" aria-label="${name}的完整图像">
     <defs>
       <linearGradient id="${id}-sky" x2="0" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="${sky}"/><stop offset="1" stop-color="${ground}"/></linearGradient>
       <linearGradient id="${id}-subject" x1=".18" y1="0" x2=".85" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="${light}"/><stop offset="1" stop-color="${dark}"/></linearGradient>
@@ -200,14 +200,14 @@ function artworkMarkup(name, {id, outline, y = 280, scale = 1, height = 560, lab
 }
 
 function figurePuzzleMarkup(figure) {
-  const {answer, art = answer, frame, marks, mirror, cutout = {}} = figure;
+  const {answer, frame, marks, mirror, cutout = {}} = figure;
   const {x = 400, y = 280, scale = 1, angle = 0} = cutout;
   const foreground = `<path d="${frame}" fill="#283f46"/><g fill="#f3ead4">${marks}</g>`;
   return `<svg class="figimage" viewBox="0 0 800 560" role="img" aria-label="图底关系谜题，观察深色剪影里的浅色形状">
     <defs>
       <mask id="figure-cutout">
         <rect width="800" height="560" fill="white"/>
-        <path d="${artwork[art].outline}" transform="translate(${x} ${y}) rotate(${angle}) scale(${scale})" fill="black" fill-rule="evenodd"/>
+        <path d="${artwork[answer].outline}" transform="translate(${x} ${y}) rotate(${angle}) scale(${scale})" fill="black" fill-rule="evenodd"/>
       </mask>
     </defs>
     <rect width="800" height="560" fill="#f3ead4"/>
