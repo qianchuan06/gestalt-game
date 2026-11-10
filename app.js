@@ -9,23 +9,36 @@ const figures=[
  {name:'林隙藏狐',image:2,answer:'狐狸',choices:['狐狸','兔子','猫头鹰','松鼠'],hint:'忽略深色树干，在中央留白中寻找尖耳朵和朝右的鼻尖。',explain:'树干和枝杈围出的留白，使狐狸的侧影成为另一种观看方式。'},
  {name:'浪隙藏鲸',image:3,answer:'鲸鱼',choices:['海龟','鲸鱼','帆船','海星'],hint:'把波浪暂时当作背景，沿着中央浅色区域看头部与尾鳍。',explain:'鲸鱼的轮廓与波浪边界重合，水面与动物共用同一片画面。'},
  {name:'浪间海豚',image:4,answer:'海豚',choices:['海豚','海豹','章鱼','飞鸟'],hint:'看画面上半部的浅色区域，寻找朝右的长吻。',explain:'一段浪花也可以被解释为跃起的海豚，主体与背景随注意力转换。'},
- {name:'双鸟与奖杯',answer:'奖杯',choices:['花瓶','奖杯','台灯','沙漏'],hint:'看浅色区域两边的环形把手，再沿中央往下找底座。',explain:'两侧鸟形相对，鸟身的边缘同时勾出奖杯的杯身和双耳。',
-  frame:'M0 330Q59 259 140 240Q165 202 224 194Q220 147 259 118Q294 95 337 118Q367 91 400 121Q433 91 463 118Q506 95 541 118Q580 147 576 194Q635 202 660 240Q741 259 800 330V430Q701 459 581 427Q506 467 400 460Q294 467 219 427Q99 459 0 430Z',
-  marks:'<circle cx="252" cy="140" r="7"/><circle cx="548" cy="140" r="7"/><path d="M52 368Q137 278 224 267Q213 331 158 359Q171 333 171 316Q130 345 52 368Z M748 368Q663 278 576 267Q587 331 642 359Q629 333 629 316Q670 345 748 368Z"/><path d="M74 416Q162 397 217 376M726 416Q638 397 583 376" fill="none" stroke="#f3ead4" stroke-width="4"/>'},
- {name:'楼影里的钥匙',answer:'钥匙',choices:['耳机','剪刀','钥匙','路灯'],hint:'从留白的大圆环往下看，右边伸出的两个直角像什么？',explain:'深色楼群之间的一圈留白、长杆和齿形，可以合在一起看成钥匙。',
-  frame:'M0 263H41V205H104V245H147V152H199V187H242V102H322V76H377V102H427V73H477V124H521V162H579V104H647V213H680V168H739V241H800V464H0Z',
-  marks:'<path d="M74 235v68m26-39v68m77-149v139m31-108v131m62-208v128m31-105v60m190-86v160m53-93v172m61-220v172m29-164v128m76-87v101m30-38v78" fill="none" stroke="#f3ead4" stroke-width="9" stroke-dasharray="11 18"/><path d="M52 422H169M90 444H206M596 419H741M623 441H685" fill="none" stroke="#f3ead4" stroke-width="4"/>'},
- {name:'峡谷里的火箭',answer:'火箭',choices:['箭头','风筝','铅笔','火箭'],hint:'从中央的尖头往下看，找两片朝外张开的尾翼。',explain:'山石间的留白形成火箭的尖头和尾翼。视线切换时，原先的背景成了主体。',
-  frame:'M0 188L114 85L201 130L280 69L344 139L393 102L431 123L509 53L584 130L660 100L800 210V560H0Z',
-  marks:'<path d="M0 250L115 124L192 161L282 109L307 145L280 129L191 181L119 143L0 276Z M501 103L511 83L586 156L660 127L800 228V252L659 152L582 183Z M0 382L119 286L169 321L223 279L248 300L171 351L121 312L0 409Z M800 404L682 306L622 345L572 310L552 329L621 369L681 333L800 431Z M363 431L380 488L370 537L399 495L418 560H386L350 534L354 488L343 448Z M437 431L426 484L451 522L464 505L449 480L457 449Z"/>'},
- {name:'窗边的小猫',answer:'小猫',choices:['小猫','松鼠','兔子','小狗'],hint:'先看留白上方的两只尖耳朵，再找右边向上卷起的尾巴。',explain:'窗帘和窗台围出一块留白。尖耳朵和卷尾巴会让你把同一片区域看成一只猫。',
-  frame:'M30 62H770V495H30Z',
-  marks:'<path d="M64 100H161Q172 200 128 275Q101 328 64 347Z M65 373Q135 333 169 264Q199 208 208 120H228Q223 239 184 304Q139 367 65 393Z M736 100H636Q626 206 672 281Q704 335 736 348Z M735 377Q673 336 634 270Q602 216 594 120H573Q583 238 616 303Q659 369 735 398Z M64 458H736V475H64Z"/><path d="M244 116H554M260 126V198M536 126V189" stroke="#f3ead4" stroke-width="5" fill="none"/>'},
- {name:'海岸上的灯塔',answer:'灯塔',choices:['城堡','灯塔','烟囱','火车'],hint:'沿两束浅色光线向中间看，留意塔顶和下方变宽的塔身。',explain:'海岸和夜空围出塔身，塔顶向两侧伸出的光线也属于同一片留白。',
-  frame:'M0 134Q74 96 173 121Q231 89 294 118Q341 99 401 106Q469 86 540 117Q639 77 800 125V560H0Z',
-  marks:'<path d="M0 177L339 210V228L0 258Z M461 210L800 161V247L461 228Z M0 435L91 392L160 406L205 369L270 397L310 385L301 410L269 424L204 396L168 430L93 419L0 459Z M800 450L698 395L641 413L595 383L524 417L502 405L494 423L526 442L593 409L635 438L694 421L800 480Z"/><path d="M78 492q42-10 84 0t84 0m318 3q39-10 78 0t78 0M263 522q38-9 76 0t76 0t76 0" stroke="#f3ead4" stroke-width="5" fill="none"/>'}
+ {name:'双鸟与奖杯',answer:'奖杯',choices:['花瓶','奖杯','台灯','沙漏'],
+  hint:'沿两只鸟相对的身体看留白，找杯身、把手和底座。',
+  explain:'两只鸟的胸口分别勾出杯身的两侧。把视线移到它们之间，鸟形退到背景，奖杯就浮现出来。',
+  mirror:true,
+  frame:'M395 134C370 137 366 165 354 182Q355 129 325 111C286 85 250 114 251 150Q252 167 271 186Q238 220 187 254L32 311L95 319L52 355L131 350L101 380L189 361Q221 392 280 400Q266 428 225 431L219 449H395Z',
+  marks:'<circle cx="282" cy="140" r="7"/><path d="M108 319Q180 282 239 274Q213 324 153 339Q174 318 178 304Z"/><path d="M112 351Q194 332 225 302" fill="none" stroke="#f3ead4" stroke-width="4"/>'},
+ {name:'双楼与钥匙',answer:'钥匙',choices:['耳机','剪刀','钥匙','路灯'],
+  hint:'先看两栋楼之间的大圆环，再找沿楼墙向下伸出的两道齿。',
+  explain:'左边的墙围出钥匙杆，右边墙的台阶围出钥匙的齿。同一组边界也可以看成两栋相邻的楼。',
+  frame:'M35 456V253H63V197H111V216H141V151H201V181H228V128H277V109H312V135H353V112H395V456Z M405 456V112H448V129H485V95H545V156H585V125H634V180H675V151H724V207H765V456Z',
+  marks:'<path d="M83 229v128m35-106v106m49-183v183m34-128v128m50-176v176m36-201v201m224-158v158m40-171v171m51-197v197m35-147v147m52-148v148m44-131v131" fill="none" stroke="#f3ead4" stroke-width="10" stroke-dasharray="13 19"/><path d="M93 455v-39h41v39m100 0v-46h45v46m255 0v-46h45v46m80 0v-39h41v39"/><circle cx="400" cy="195" r="32" fill="#283f46"/>'},
+ {name:'双松与火箭',answer:'火箭',choices:['箭头','风筝','铅笔','火箭'],
+  hint:'先认出两棵松树，再看树之间的尖头和两片尾翼。',
+  explain:'两棵松树的内侧枝条让出了尖头和尾翼。它们的边缘也是火箭的外轮廓。',
+  mirror:true,
+  frame:'M100 183L214 56L244 112L287 47L354 121L397 113V436L286 442L264 429V481H218V429H46L145 329H75L171 247H96L170 183Z',
+  marks:'<path d="M132 278L205 207L230 228L276 181L291 196L230 251L205 230L151 278Z M102 381L189 304L216 332L257 291L269 303L215 355L188 329L128 381Z"/>'},
+ {name:'双海豹与小猫',answer:'小猫',choices:['小猫','松鼠','兔子','小狗'],
+  hint:'先看两只相向的海豹，再从它们中间的留白找尖耳朵和卷尾巴。',
+  explain:'两只海豹的头部和身体朝向中央。它们围出的同一组边缘，也勾画出小猫的耳朵、背部和尾巴。',
+  frame:'M21 423Q75 407 82 349Q69 318 91 290Q121 253 166 241Q161 202 185 174Q213 110 258 111Q293 108 326 140Q350 146 381 178Q401 194 390 213Q385 227 365 230L331 226Q343 247 365 263Q398 309 395 414L365 429Q312 443 267 426Q218 449 186 423Q107 464 21 439Z M779 423Q725 407 718 349Q731 318 709 290Q679 253 634 241Q639 202 615 174Q587 110 542 111Q507 108 474 140Q450 146 419 178Q399 194 410 213Q415 227 435 230L469 226Q457 247 435 263Q402 309 405 414L435 429Q488 443 533 426Q582 449 614 423Q693 464 779 439Z',
+  marks:'<circle cx="266" cy="178" r="7"/><circle cx="534" cy="178" r="7"/><path d="M242 152Q215 179 219 215M558 152Q585 179 581 215M124 374Q174 335 216 378Q234 401 219 427M676 374Q626 335 584 378Q566 401 581 427" stroke="#f3ead4" stroke-width="5" fill="none"/>'},
+ {name:'双帆与灯塔',answer:'灯塔',choices:['城堡','灯塔','烟囱','火车'],
+  hint:'先看左右两艘帆船，再找它们之间上窄下宽的留白。',
+  explain:'两片帆和两条船身的内侧共用一组边界。视线移到中间，就会看见灯塔和两束光。',
+  mirror:true,
+  frame:'M32 403L91 405V380H109V403H213V375H225V108H240V91L294 111L240 131V151L397 113V419L392 452Q356 468 315 466H115Q56 453 32 403Z M61 380L212 201V380Z',
+  marks:'<path d="M245 176L340 198V214L245 236Z M50 407H401V414H50Z"/><path d="M89 438q31-10 62 0t62 0t62 0m-164 40q31-10 62 0t62 0" fill="none" stroke="#f3ead4" stroke-width="4"/>'}
 ];
-const shapeNames=['苹果','房屋','爱心','猫','茶杯','冰淇淋','挂锁','雨靴','吉他','兔子'];
+const shapeNames=['苹果','房屋','爱心','猫','茶杯','冰淇淋','皇冠','雨靴','吉他','兔子'];
 const simNames=['鱼','爱心','月牙','叶片','星星','闪电','音符','眼镜','飞机','船锚'];
 const questionCounts=[figures.length, shapeNames.length, simNames.length];
 const originalQuestionCount=5;
@@ -38,6 +51,10 @@ if((saved.revision||0)<3){
  completed=Object.fromEntries(Object.entries(completed).filter(([key])=>Number(key.split('-')[1])<originalQuestionCount));
  persist();
 }
+if(completed['1-6']?.name==='挂锁'){
+ delete completed['1-6'];
+ persist();
+}
 let artIndex=0;
 let room=0, level=0, view='play', won=false, hinted=false, mode=null, selected=-1, pieces=[], points=[], filter=-1, seed=1, drag=null;
 function persist(){try{localStorage.setItem('between-perceptions-v1',JSON.stringify({completed,settings,revision:3}))}catch{}}
@@ -48,7 +65,7 @@ function topIntro(title,desc){return `<div class="intro"><div><p class="eyebrow"
 function render(){
  $('#collectionCount').textContent=count();document.querySelectorAll('.nav').forEach(b=>b.classList.remove('active'));$('#'+({play:'navPlay',collection:'navCollection',about:'navAbout'}[view])).classList.add('active');
  if(view==='about'){renderArt();return}
- if(view==='collection'){app.innerHTML=topIntro('你的发现，留在这里','每一次发现，都是你与作品共同完成的解释。')+(count()?`<div class="gallery">${Object.entries(completed).map(([key,v])=>{const [r,l]=key.split('-').map(Number);return `<article>${completedArtwork(r, l, 'collection-'+key)}<p class="eyebrow">${english[r]} / ${String(l+1).padStart(2,'0')}</p><h3>${v.name}</h3><p>${v.help?'使用过提示':'独立完成'} · ${roomNames[r]}</p></article>`}).join('')}</div>`:`<div class="empty"><h2>你的第一件作品，正在等你</h2><p class="muted">在任意展厅完成一个任务，就会收藏在这里。</p><button class="primary" id="emptyPlay">开始探索</button></div>`);if($('#emptyPlay'))$('#emptyPlay').onclick=()=>{view='play';render()};return}
+ if(view==='collection'){app.innerHTML=topIntro('你的发现，留在这里','每一次发现，都是你与作品共同完成的解释。')+(count()?`<div class="gallery">${Object.entries(completed).map(([key,v])=>{const [r,l]=key.split('-').map(Number);return `<article>${completedArtwork(r, l, 'collection-'+key)}<p class="eyebrow">${english[r]} / ${String(l+1).padStart(2,'0')}</p><h3>${r===0?figures[l].name:v.name}</h3><p>${v.help?'使用过提示':'独立完成'} · ${roomNames[r]}</p></article>`}).join('')}</div>`:`<div class="empty"><h2>你的第一件作品，正在等你</h2><p class="muted">在任意展厅完成一个任务，就会收藏在这里。</p><button class="primary" id="emptyPlay">开始探索</button></div>`);if($('#emptyPlay'))$('#emptyPlay').onclick=()=>{view='play';render()};return}
  won=false;hinted=false;selected=-1;filter=-1;drag=null;
  app.innerHTML=topIntro('看见之外，还有另一种可能','在图形与留白之间，亲手完成一次知觉的转变。')+`<div class="layout"><aside class="sidebar"><p class="side-label">CHOOSE A GALLERY</p><div class="rooms">${roomNames.map((n,i)=>`<button class="room ${room===i?'selected':''}" data-room="${i}"><span class="num">0${i+1}</span><span><strong>${n}</strong><small>${english[i]}</small></span><span class="arrow">↗</span></button>`).join('')}</div><div class="side-note">${['试着换一种看法。<br>你眼中的背景，也许正是另一幅作品。','让线条彼此呼应。<br>不必补齐全部轮廓，也能看见一个整体。','位置不变，关系改变。<br>让相近的颜色带你发现隐藏的形象。'][room]}<div class="progress-line"><i style="width:${count()/totalQuestions*100}%"></i></div><p><span data-progress-count>${count()}</span> / ${totalQuestions} 已收藏</p></div></aside><section class="workspace"><div class="worktop"><div><strong>作品 ${String(level+1).padStart(2,'0')}</strong><small>${english[room]}</small></div><div class="dots">${Array.from({length:questionCounts[room]},(_,i)=>`<button class="level-dot ${i===level?'current':''} ${completed[room+'-'+i]?'done':''}" data-level="${i}" aria-label="第${i+1}题">${i+1}</button>`).join('')}</div></div><div class="stage" id="stage"></div><div class="tools"><div class="toolset" id="specificTools"></div><div class="toolset"><button class="subtle" id="hintBtn">一点提示</button><button class="subtle" id="resetBtn">重新开始 ↺</button></div></div><p class="hinttext" id="hintText" hidden></p><div class="workbottom" id="workbottom"></div></section></div>`;
  document.querySelectorAll('[data-room]').forEach(b=>b.onclick=()=>{room=+b.dataset.room;level=0;render()});document.querySelectorAll('[data-level]').forEach(b=>b.onclick=()=>{level=+b.dataset.level;render()});$('#resetBtn').onclick=()=>{seed++;render()};$('#hintBtn').onclick=showHint;
@@ -137,7 +154,8 @@ function buildPieces(){
  const isNew=level>=originalQuestionCount;
  const segmentCoverage=isNew?.85:.68;
  const random=rng(200+level*39+seed);
- const movable=new Set(Array.from({length:settings.pieces},(_,i)=>Math.floor(i*segmentCount/settings.pieces)));
+ const offset=shapeNames[level]==='雨靴'?1:0;
+ const movable=new Set(Array.from({length:settings.pieces},(_,i)=>(Math.floor(i*segmentCount/settings.pieces)+offset)%segmentCount));
  let traySlot=0;
  pieces=Array.from({length:segmentCount},(_,i)=>{
    const start=Math.floor(i*outline.length/segmentCount);
@@ -156,12 +174,7 @@ function buildPieces(){
  });
  return pieces;
 }
-function closureCue(l){
- if(l===0)return '<path d="M400 137 Q396 111 411 99 M405 122 Q423 97 448 106 Q434 128 405 122" fill="none" stroke="#203b4d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>';
- const cue=artwork[shapeNames[l]].cue;
- return cue?`<path d="${cue}" transform="translate(400 235)" fill="none" stroke="#506b71" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>`:'';
-}
-function mountClosure(){mode='closure';buildPieces();$('#stage').innerHTML=`<span class="stage-label">DRAG · ROTATE · DISCOVER</span><svg id="puzzleSvg" viewBox="0 0 800 640" aria-label="封闭性拼图，可拖动橙色线条"><line x1="35" y1="420" x2="765" y2="420" stroke="#e0e2d7" stroke-dasharray="4 7"/><text x="35" y="447" fill="#879080" font-size="11" letter-spacing="2">可移动碎片</text>${closureCue(level)}<g id="targetHint"></g><g id="pieces"></g></svg>`;$('#specificTools').innerHTML='<button class="subtle" id="rotateLeft" aria-label="逆时针旋转15度">↶ 15°</button><button class="subtle" id="rotateRight" aria-label="顺时针旋转15度">↷ 15°</button><span class="toolhint" id="pieceProgress"></span>';$('#workbottom').innerHTML='<p class="taskline">将橙色碎片拖入上方画布，调整方向，让一个熟悉的形象出现。</p><p class="muted">点击选中碎片后可旋转。方向与位置接近目标时会自动吸附。碎片归位后，完整图像会逐渐显现。</p>';$('#rotateLeft').onclick=()=>rotate(-15);$('#rotateRight').onclick=()=>rotate(15);paintPieces();const svg=$('#puzzleSvg');svg.addEventListener('pointermove',movePiece);svg.addEventListener('pointerup',endDrag);svg.addEventListener('pointercancel',endDrag)}
+function mountClosure(){mode='closure';buildPieces();$('#stage').innerHTML=`<span class="stage-label">DRAG · ROTATE · DISCOVER</span><svg id="puzzleSvg" viewBox="0 0 800 640" aria-label="封闭性拼图，可拖动橙色线条"><line x1="35" y1="420" x2="765" y2="420" stroke="#e0e2d7" stroke-dasharray="4 7"/><text x="35" y="447" fill="#879080" font-size="11" letter-spacing="2">可移动碎片</text>${level===0?'<path d="M400 137 Q396 111 411 99 M405 122 Q423 97 448 106 Q434 128 405 122" fill="none" stroke="#203b4d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>':''}<g id="targetHint"></g><g id="pieces"></g></svg>`;$('#specificTools').innerHTML='<button class="subtle" id="rotateLeft" aria-label="逆时针旋转15度">↶ 15°</button><button class="subtle" id="rotateRight" aria-label="顺时针旋转15度">↷ 15°</button><span class="toolhint" id="pieceProgress"></span>';$('#workbottom').innerHTML='<p class="taskline">将橙色碎片拖入上方画布，调整方向，让一个熟悉的形象出现。</p><p class="muted">点击选中碎片后可旋转。方向与位置接近目标时会自动吸附。碎片归位后，完整图像会逐渐显现。</p>';$('#rotateLeft').onclick=()=>rotate(-15);$('#rotateRight').onclick=()=>rotate(15);paintPieces();const svg=$('#puzzleSvg');svg.addEventListener('pointermove',movePiece);svg.addEventListener('pointerup',endDrag);svg.addEventListener('pointercancel',endDrag)}
 function paintPieces(){if(!$('#pieces'))return;$('#pieces').innerHTML=pieces.map((p,i)=>`<g class="piece ${i===selected?'selected':''} ${p.snapped?'snapped':''}" data-piece="${i}" transform="translate(${p.x} ${p.y}) rotate(${p.a})" ${p.snapped?'':`tabindex="0" role="button" aria-label="碎片 ${i+1}，方向${p.a}度"`}><path class="hit" d="${p.d}" fill="none" stroke="transparent" stroke-width="29"/><path class="visible" d="${p.d}" fill="none" stroke="${p.fixed?'#203b4d':p.snapped?'#39867b':'#c36a43'}" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></g>`).join('');document.querySelectorAll('[data-piece]').forEach(g=>{g.onpointerdown=e=>{const i=+g.dataset.piece,p=pieces[i];if(p.snapped||won)return;e.preventDefault();selected=i;const pt=svgPoint(e);drag={i,dx:pt.x-p.x,dy:pt.y-p.y};$('#puzzleSvg').setPointerCapture(e.pointerId);paintPieces()};g.onkeydown=e=>{selected=+g.dataset.piece;if(e.key==='Enter'||e.key===' '){e.preventDefault();paintPieces()}else if(e.key==='r'||e.key==='R')rotate(15);else if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key)){e.preventDefault();const p=pieces[selected];p.x+=e.key==='ArrowLeft'?-10:e.key==='ArrowRight'?10:0;p.y+=e.key==='ArrowUp'?-10:e.key==='ArrowDown'?10:0;trySnap(p);paintPieces();document.querySelector(`[data-piece="${selected}"]`)?.focus();checkClosure()}}});$('#pieceProgress').textContent=pieces.filter(p=>!p.fixed&&p.snapped).length+' / '+pieces.filter(p=>!p.fixed).length+' 已归位'}
 function svgPoint(e){const pt=$('#puzzleSvg').createSVGPoint();pt.x=e.clientX;pt.y=e.clientY;return pt.matrixTransform($('#puzzleSvg').getScreenCTM().inverse())}
 function movePiece(e){if(!drag)return;const pt=svgPoint(e),p=pieces[drag.i];p.x=Math.max(20,Math.min(780,pt.x-drag.dx));p.y=Math.max(35,Math.min(615,pt.y-drag.dy));const g=document.querySelector(`[data-piece="${drag.i}"]`);g?.setAttribute('transform',`translate(${p.x} ${p.y}) rotate(${p.a})`)}
