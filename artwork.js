@@ -76,6 +76,11 @@ const artwork = {
     palette: ['#ffdf85','#bd7444'], scene: 'table',
     detail: '<path d="M-87 -134H87M-91 121H91M-53 98H53" stroke="#fff0b1" stroke-width="8" fill="none"/><path d="M-71 -117Q-61 -24 -23 -8" stroke="#fff3c1" stroke-width="12" fill="none" stroke-linecap="round"/><path d="M9 -104l15 30 33 5-24 24 5 32L9 -29l-29 16 5-32-24-24 33-5Z" fill="#f9bd5e" stroke="#b77942" stroke-width="3"/>'
   },
+  '侧卧兔': {
+    outline: 'M-96 50Q-107 40 -90 28L-82 22Q-100 12 -99 -2Q-99 -15 -82 -20L-64 -26Q-70 -45 -90 -66Q-105 -82 -98 -92Q-91 -101 -76 -92Q-55 -77 -46 -43Q-49 -73 -40 -96Q-33 -113 -22 -105Q-10 -97 -17 -68L-18 -37Q5 -39 23 -23Q58 -24 81 -4Q102 12 89 38Q107 30 120 40Q133 54 116 63Q102 70 85 61Q65 75 35 76H-72Q-96 75 -96 64Z',
+    palette: ['#f3e4d0','#aa8273'], scene: 'garden',
+    detail: '<path d="M-89 -87Q-71 -81 -55 -40Q-74 -58 -89 -87Z M-27 -97Q-20 -81 -34 -43Q-39 -67 -27 -97Z" fill="#d79394"/><path d="M-78 43Q-24 24 25 51Q58 61 78 49L82 77H-91Z" fill="#fae8ce"/><circle cx="-70" cy="-7" r="5.5" fill="#584849"/><path d="M-98 5l12 1-7 6z" fill="#ba7c7c"/><path d="M-90 15q8 10 22 4m74 14q21-13 41 1m-87 20q12-11 26-6" stroke="#8d695e" stroke-width="4" fill="none" stroke-linecap="round"/><ellipse cx="109" cy="50" rx="16" ry="14" fill="#f6e7ce"/>'
+  },
   '小鱼': {
     outline: 'M-75 -13Q-113 -40 -151 -50Q-158 -28 -132 0Q-156 25 -151 48Q-107 39 -75 14C-47 51 31 63 80 37Q117 22 139 2Q139 -8 115 -22Q74 -49 25 -43L-9 -66L-41 -42Q-57 -34 -75 -13Z',
     palette: ['#f7da8a','#b35d51'], scene: 'water',
@@ -171,12 +176,12 @@ function sceneDetails(scene) {
   return '<g fill="#fff4d2" opacity=".75"><path d="M68 178Q91 145 122 163Q151 113 190 159Q230 158 238 178Z"/><path d="M562 195Q600 160 623 178Q653 131 690 176Q733 168 747 195Z"/></g><path d="M0 458L166 330L326 458L487 388L650 455L800 369V560H0Z" fill="#6b98a5" opacity=".63"/><path d="M0 504Q186 429 377 496T800 462V560H0Z" fill="#668e83"/>';
 }
 
-function artworkMarkup(name, {id, outline, y = 280, scale = 1, height = 560} = {}) {
+function artworkMarkup(name, {id, outline, y = 280, scale = 1, height = 560, label = name} = {}) {
   const subject = artwork[name];
   const path = outline || subject.outline;
   const [sky, ground, glow] = scenes[subject.scene];
   const [light, dark] = subject.palette;
-  return `<svg class="complete-art" viewBox="0 0 800 ${height}" role="img" aria-label="${name}的完整图像">
+  return `<svg class="complete-art" viewBox="0 0 800 ${height}" role="img" aria-label="${label}的完整图像">
     <defs>
       <linearGradient id="${id}-sky" x2="0" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="${sky}"/><stop offset="1" stop-color="${ground}"/></linearGradient>
       <linearGradient id="${id}-subject" x1=".18" y1="0" x2=".85" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="${light}"/><stop offset="1" stop-color="${dark}"/></linearGradient>
@@ -195,14 +200,14 @@ function artworkMarkup(name, {id, outline, y = 280, scale = 1, height = 560} = {
 }
 
 function figurePuzzleMarkup(figure) {
-  const {answer, frame, marks, mirror, cutout = {}} = figure;
+  const {answer, art = answer, frame, marks, mirror, cutout = {}} = figure;
   const {x = 400, y = 280, scale = 1, angle = 0} = cutout;
   const foreground = `<path d="${frame}" fill="#283f46"/><g fill="#f3ead4">${marks}</g>`;
   return `<svg class="figimage" viewBox="0 0 800 560" role="img" aria-label="图底关系谜题，观察深色剪影里的浅色形状">
     <defs>
       <mask id="figure-cutout">
         <rect width="800" height="560" fill="white"/>
-        <path d="${artwork[answer].outline}" transform="translate(${x} ${y}) rotate(${angle}) scale(${scale})" fill="black" fill-rule="evenodd"/>
+        <path d="${artwork[art].outline}" transform="translate(${x} ${y}) rotate(${angle}) scale(${scale})" fill="black" fill-rule="evenodd"/>
       </mask>
     </defs>
     <rect width="800" height="560" fill="#f3ead4"/>
