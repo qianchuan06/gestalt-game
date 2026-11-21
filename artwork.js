@@ -184,21 +184,53 @@ function artworkMarkup(name, {id, outline, y = 280, scale = 1, height = 560} = {
   </svg>`;
 }
 
-function figurePuzzleMarkup(figure) {
+function figurePuzzleMarkup(figure, maskId='figure-cutout') {
   const {answer, frame, marks, mirror, cutout = {}} = figure;
   const {x = 400, y = 280, scale = 1, angle = 0} = cutout;
   const foreground = `<path d="${frame}" fill="#283f46"/><g fill="#f3ead4">${marks}</g>`;
   return `<svg class="figimage" viewBox="0 0 800 560" role="img" aria-label="图底关系谜题，观察深色剪影里的浅色形状">
     <defs>
-      <mask id="figure-cutout">
+      <mask id="${maskId}">
         <rect width="800" height="560" fill="white"/>
         <path d="${artwork[answer].outline}" transform="translate(${x} ${y}) rotate(${angle}) scale(${scale})" fill="black" fill-rule="evenodd"/>
       </mask>
     </defs>
     <rect width="800" height="560" fill="#f3ead4"/>
-    <g mask="url(#figure-cutout)">
+    <g mask="url(#${maskId})">
       ${foreground}
       ${mirror?`<g transform="translate(800 0) scale(-1 1)">${foreground}</g>`:''}
     </g>
   </svg>`;
+}
+
+const figureRevealDetails=[
+ '<path d="M179 39Q480 74 780 39L780 69Q480 94 179 69Z" fill="#7d493b"/><path d="M251 435Q480 479 710 435M238 457Q480 501 722 457M220 538Q480 587 741 538" fill="none" stroke="#ffe8b5" stroke-width="9"/><path d="M425 498Q400 445 480 401Q560 445 535 498M455 503Q440 469 480 444Q520 469 505 503" fill="none" stroke="#9b6042" stroke-width="7"/>',
+ '<path d="M283 366Q389 390 459 433L466 640H481L478 435Q545 393 626 362V478H483V640H450V479H281Z" fill="#588968"/><path d="M309 375Q400 405 455 454M602 375Q529 409 480 454M466 449L466 640" fill="none" stroke="#b9d097" stroke-width="5" stroke-linecap="round"/><path d="M421 189Q397 271 401 336Q407 380 454 405M532 195Q545 272 525 339Q514 375 479 399M464 247Q448 305 460 351" fill="none" stroke="#f7d3b4" stroke-width="7" stroke-linecap="round" opacity=".7"/>',
+ '<path d="M379 146L395 218L368 234ZM539 187L513 229L534 243Z" fill="#8b4a3e"/><path d="M371 354Q410 370 446 357Q488 376 521 358L628 348Q584 398 510 395Q463 410 436 456L400 443Z" fill="#f5dfb6"/><path d="M515 304Q532 296 545 307" fill="none" stroke="#60463f" stroke-width="6" stroke-linecap="round"/><ellipse cx="622" cy="353" rx="12" ry="9" fill="#59443e"/>',
+ '<path d="M182 356Q264 396 391 399Q540 413 659 338L642 416Q501 458 357 441L220 388Z" fill="#d5e4cf"/><path d="M250 382Q337 420 426 419M268 398Q342 434 413 431" fill="none" stroke="#609aa0" stroke-width="5"/><path d="M446 395Q457 433 489 460L455 451Q429 425 425 402Z" fill="#4e919d"/><circle cx="279" cy="350" r="8" fill="#294758"/><path d="M237 371Q259 386 282 380" fill="none" stroke="#537f89" stroke-width="4" stroke-linecap="round"/>',
+ '<path d="M396 308Q555 192 701 191Q787 178 862 139L832 177Q751 200 681 216L626 268Q561 264 519 269L461 300Z" fill="#d8e9d6"/><path d="M599 211Q610 237 583 258L561 262L573 237Z" fill="#668fa3"/><circle cx="782" cy="132" r="7" fill="#294659"/><path d="M823 155L850 150M162 480Q203 456 245 458" fill="none" stroke="#527e8c" stroke-width="4" stroke-linecap="round"/>'
+];
+
+function figureArtworkMarkup(index,id){
+ const figure=figures[index];
+ const subject=artwork[figure.answer];
+ const raster=figure.image!==undefined;
+ const outline=raster?figureSilhouettes[figure.image]:subject.outline;
+ const [light,dark]=subject.palette;
+ const {x=400,y=280,scale=1,angle=0}=figure.cutout||{};
+ const transform=raster?'':`translate(${x} ${y}) rotate(${angle}) scale(${scale})`;
+ const definition=`<defs>
+ <linearGradient id="${id}-color" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="${light}"/><stop offset="1" stop-color="${dark}"/></linearGradient>
+ <clipPath id="${id}-shape"><path d="${outline}" clip-rule="evenodd"/></clipPath>
+ </defs>`;
+ const detail=raster?figureRevealDetails[figure.image]:subject.detail;
+ const subjectMarkup=`${definition}<g${transform?` transform="${transform}"`:''}><g clip-path="url(#${id}-shape)">
+ <path d="${outline}" fill="url(#${id}-color)" fill-rule="evenodd"/>
+ ${detail}
+ </g></g>`;
+ if(raster)return `<svg class="complete-art" viewBox="0 0 960 640" role="img" aria-label="${figure.answer}的完整图像"><image href="assets/figure-${figure.image}.webp" width="960" height="640"/>${subjectMarkup}</svg>`;
+ return figurePuzzleMarkup(figure,id+'-base')
+   .replace('class="figimage"','class="complete-art"')
+   .replace('aria-label="图底关系谜题，观察深色剪影里的浅色形状"',`aria-label="${figure.answer}的完整图像"`)
+   .replace('</svg>',subjectMarkup+'</svg>');
 }

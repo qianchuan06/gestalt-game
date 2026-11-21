@@ -77,10 +77,11 @@ function mountFigure(){
 }
 
 function completedArtwork(r, l, id, inStage=false){
- const name=r===0?figures[l].answer:r===1?shapeNames[l]:simNames[l];
+ if(r===0)return figureArtworkMarkup(l,id);
+ const name=r===1?shapeNames[l]:simNames[l];
  if(r!==1){
    const scale=r===2 && l>=originalQuestionCount?similarityScale:1;
-   return artworkMarkup(name,{id,scale});
+   return artworkMarkup(name,{id,scale,...(l<originalQuestionCount?{outline:similaritySilhouettes[l]}:{})});
  }
  const outline=shapeOutline(l).map(([x,y],i)=>`${i?'L':'M'}${x.toFixed(2)} ${y.toFixed(2)}`).join(' ')+'Z';
  return artworkMarkup(name,{id,outline,...(inStage?{y:235,height:640}:{})});
