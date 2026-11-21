@@ -135,3 +135,64 @@
 .art-imagecanvas #classicImage[hidden] {
   display: none;
 }
+
+.wave-guide .wave-space {
+  fill: #ffe58b66;
+  stroke: none;
+}
+.wave-guide .wave-edge {
+  stroke: #7ee9f2;
+  stroke-width: 4px;
+}
+.wave-guide .wave-pointer {
+  stroke: #ffe89a;
+  stroke-width: 2px;
+}
+.color-guide [hidden] {
+  display: none;
+}
+.color-group .color-outline {
+  fill: none;
+  stroke: #992f35;
+  stroke-width: 2.5px;
+  vector-effect: non-scaling-stroke;
+}
+.color-group[data-color-group="blue"] .color-outline {
+  stroke: #15538b;
+}
+.color-legend-bg {
+  fill: #203b3bee;
+}
+.color-legend {
+  fill: #fff5dc;
+  font-size: 24px;
+  font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+.art-imagecanvas #classicImage.color-muted {
+  filter: grayscale(1) contrast(.7) brightness(1.3);
+}
+.art-actions {
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+.art-color-controls {
+  display: flex;
+  gap: 8px;
+}
+.art-red::before, .art-blue::before {
+  content: "";
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: #b03e3f;
+}
+.art-blue::before {
+  background: #215c8d;
+}
+.art-color-controls button[aria-pressed="true"] {
+  background: #e0e6db;
+  border-color: #41645c;
+  box-shadow: inset 0 0 0 1px #41645c;
+}

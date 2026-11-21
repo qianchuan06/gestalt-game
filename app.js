@@ -188,9 +188,9 @@ function mountSimilarity(){mode='similarity';points=makePoints(level);$('#stage'
 function updateSwatches(){document.querySelectorAll('[data-filter]').forEach(b=>b.classList.toggle('on',+b.dataset.filter===filter))}
 function drawDots(){const c=$('#dotsCanvas');if(!c)return;const ctx=c.getContext('2d');ctx.setTransform(2,0,0,2,0,0);ctx.fillStyle='#f4f0e6';ctx.fillRect(0,0,800,560);for(const p of points){ctx.beginPath();ctx.arc(p.x,p.y,level>=originalQuestionCount?6.4:5.2,0,Math.PI*2);ctx.fillStyle=filter<0?COLORS[p.g]:p.g===filter?'#155e59':'#e7e6de';ctx.fill()}}
 const artWorks=[
-{title:'神奈川冲浪里',artist:'葛饰北斋',date:'约1830—1832年',museum:'大都会艺术博物馆',tag:'图底关系',en:'FIGURE & GROUND',image:'https://collectionapi.metmuseum.org/api/collection/v1/iiif/45434/134438/main-image',url:'https://www.metmuseum.org/art/collection/search/45434',intro:'巨浪与天空的边界，也在组织你的观看。',question:'把目光从深蓝色的海浪移向浪尖围出的浅色空间，哪种说法更符合你的观察？',options:['留白也参与构成画面的形状','背景空白不会影响观看','只能把最深的颜色当作主体'],answer:0,explain:'从图底关系的角度看，浅色天空不是被动的空白。浪尖与天空的共同边界塑造了画面的张力。远处富士山又与巨浪形成大小、远近的对照。此处讨论图底组织，不要求原作具有双义图。',caption:'原作图像：The Metropolitan Museum of Art，公共领域。',effect:'gray',effectText:'去色观察图底'},
+{title:'神奈川冲浪里',artist:'葛饰北斋',date:'约1830—1832年',museum:'大都会艺术博物馆',tag:'图底关系',en:'FIGURE & GROUND',image:'https://collectionapi.metmuseum.org/api/collection/v1/iiif/45434/134438/main-image',url:'https://www.metmuseum.org/art/collection/search/45434',intro:'巨浪与天空的边界，也在组织你的观看。',question:'把目光从深蓝色的海浪移向浪尖围出的浅色空间，哪种说法更符合你的观察？',options:['留白也参与构成画面的形状','背景空白不会影响观看','只能把最深的颜色当作主体'],answer:0,explain:'从图底关系的角度看，浅色天空不是被动的空白。浪尖与天空的共同边界塑造了画面的张力。远处富士山又与巨浪形成大小、远近的对照。此处讨论图底组织，不要求原作具有双义图。',caption:'原作图像：The Metropolitan Museum of Art，公共领域。',effect:'ground',effectText:'显示图底提示'},
 {title:'舞蹈（I）',artist:'亨利·马蒂斯',date:'1909年',museum:'纽约现代艺术博物馆',tag:'封闭趋势与连续性',en:'CLOSURE & CONTINUITY',image:'https://www.moma.org/media/W1siZiIsIjYxOTkzOCJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ.jpg?sha=91b33eed638d00aa',url:'https://www.moma.org/collection/works/79124',intro:'人物之间有间隙，舞蹈的环形关系仍然成立。',question:'沿着人物伸展的手臂观察，即使局部连接留有间隙，你仍更容易感受到什么？',options:['彼此无关的独立色块','一圈持续的舞蹈运动','只能看到完整的几何圆'],answer:1,explain:'我们可以沿着人物姿态和手臂方向，补足环形运动的联系。这可用封闭趋势与良好连续性共同解读。它不同于补全单个物体轮廓，也不意味着画家有意演示某一条心理学法则。',caption:'原作图像：MoMA。© Succession H. Matisse / Artists Rights Society (ARS), New York。',effect:'guide',effectText:'显示环形观察线'},
-{title:'百老汇爵士乐',artist:'皮特·蒙德里安',date:'1942—1943年',museum:'纽约现代艺术博物馆',tag:'相似性与视觉节奏',en:'SIMILARITY',image:'https://www.moma.org/media/W1siZiIsIjY0NDI3OSJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ.jpg?sha=93289f7c758e80ef',url:'https://www.moma.org/collection/works/78682',intro:'反复出现的颜色，让分散色块产生联系。',question:'寻找画面里重复出现的红色或蓝色色块。去色后再比较，哪种视觉线索减弱了？',options:['所有线条的位置','画面的物理尺寸','同色元素之间的联系'],answer:2,explain:'同色方块分布在不同位置，仍会形成视觉上的呼应。去色后，颜色相似性提供的联系减弱，线条方向、邻近关系和明暗仍在组织画面。这是对作品的格式塔观察解读。',caption:'原作图像：MoMA。作品与馆藏信息见馆方来源。',effect:'gray',effectText:'去色比较'}
+{title:'百老汇爵士乐',artist:'皮特·蒙德里安',date:'1942—1943年',museum:'纽约现代艺术博物馆',tag:'相似性与视觉节奏',en:'SIMILARITY',image:'https://www.moma.org/media/W1siZiIsIjY0NDI3OSJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ.jpg?sha=93289f7c758e80ef',url:'https://www.moma.org/collection/works/78682',intro:'反复出现的颜色，让分散色块产生联系。',question:'分别强调红色色块、蓝色色块，再还原作品。两组色块各自依靠哪种线索形成联系？',options:['每个色块都紧挨在一起','各个色块的面积完全相同','相近颜色让分散元素相互呼应'],answer:2,explain:'强调红色或蓝色后，相隔较远的同色元素更容易被一起注意到。还原作品时，其他颜色和线条也参与组织画面。这是对作品的格式塔观察解读。',caption:'原作图像：MoMA。作品与馆藏信息见馆方来源。',effect:'similarity',effectText:'强调同色色块'}
 ];
 function danceGuideMarkup(){
  return `<svg class="art-guide" id="artGuide" hidden viewBox="0 0 1000 664.5" role="img" aria-label="沿舞者手臂延伸的环形观察线与局部连接提示，非原作">
@@ -207,7 +207,95 @@ function danceGuideMarkup(){
  <text class="guide-label" x="431" y="169">环形运动的观看路径</text>
  </svg>`;
 }
-function renderArt(){const a=artWorks[artIndex];app.innerHTML=topIntro('艺术中的格式塔','把游戏里的发现，带回经典作品。')+`<div class="art-tabs">${artWorks.map((x,i)=>`<button class="subtle ${i===artIndex?'chosen':''}" data-art="${i}">0${i+1} · ${x.tag}</button>`).join('')}</div><section class="art-layout"><div class="art-visual"><div class="art-imagebox" id="artImageBox"><div class="art-imagecanvas"><img id="classicImage" src="${a.image}" alt="${a.artist}《${a.title}》原作">${a.effect==='guide'?danceGuideMarkup():''}</div><div id="artFallback" hidden><h2>《${a.title}》</h2><p>馆方图像暂时未能载入。</p><a href="${a.url}" target="_blank" rel="noopener">打开馆方原作 ↗</a></div></div><p class="guide-note" id="artGuideNote" hidden role="status">黄色虚线沿舞者手臂提示环形运动，橙色圆圈突出局部连接。观察线是叠加的解读示意。</p><p class="art-credit">${a.caption}</p><div class="art-actions"><button class="subtle" id="artEffect" aria-pressed="false"${a.effect==='guide'?' aria-controls="artGuide artGuideNote"':''}>${a.effectText}</button><a class="source-link" href="${a.url}" target="_blank" rel="noopener">馆方原作与资料 ↗</a></div></div><div class="art-text"><p class="eyebrow">${a.en}</p><h2>《${a.title}》</h2><p class="art-meta">${a.artist} · ${a.date}<br>${a.museum}</p><p class="art-intro">${a.intro}</p><div class="art-question"><p class="eyebrow">LOOK · THINK · DISCOVER</p><p>${a.question}</p><div class="art-options">${a.options.map((v,i)=>`<button class="choice" data-art-answer="${i}">${v}</button>`).join('')}</div><div id="artFeedback" role="status"></div></div><p class="art-disclaimer">观察解读：借助格式塔原理分析观看效果，并非艺术家创作意图的定论。</p><button class="primary" id="artToGame">回到${roomNames[artIndex]} →</button></div></section>`;document.querySelectorAll('[data-art]').forEach(b=>b.onclick=()=>{artIndex=+b.dataset.art;renderArt()});const img=$('#classicImage');img.onerror=()=>{img.hidden=true;$('#artFallback').hidden=false;$('#artEffect').disabled=true};let effect=false;$('#artEffect').onclick=()=>{effect=!effect;if(a.effect==='gray')img.classList.toggle('desaturated',effect);else{$('#artGuide').toggleAttribute('hidden',!effect);$('#artGuideNote').hidden=!effect;$('#artImageBox').classList.toggle('guided',effect)}$('#artEffect').setAttribute('aria-pressed',String(effect));$('#artEffect').textContent=effect?(a.effect==='guide'?'隐藏环形观察线':'还原作品'):a.effectText};document.querySelectorAll('[data-art-answer]').forEach(b=>b.onclick=()=>{let correct=+b.dataset.artAnswer===a.answer;$('#artFeedback').innerHTML=correct?`<h3>你发现了作品中的联系。</h3><p>${a.explain}</p>`:'<p>再观察一下颜色、边界与人物之间的联系，也可以先试试左侧观察工具。</p>';b.classList.toggle('art-correct',correct)});$('#artToGame').onclick=()=>{room=artIndex;level=0;view='play';render()}}
+function waveGuideMarkup(){
+ const edge='M472 247Q447 236 427 255Q404 276 398 308Q393 342 409 379Q432 425 475 450L496 456';
+ return `<svg class="art-guide wave-guide" id="artGuide" hidden viewBox="0 0 1000 674" preserveAspectRatio="none" role="img" aria-label="浪内天空的浅色空间与浪尖的共同边界，叠加观察提示">
+ <path class="wave-space" d="${edge}Q565 480 685 457Q770 430 840 340L840 199L569 179Q527 228 472 247Z"/>
+ <path class="guide-shadow" d="${edge}"/>
+ <path class="wave-edge" d="${edge}"/>
+ <path class="wave-pointer" d="M286 356L359 346L400 330M593 329H564L463 330M430 512L450 473"/>
+ <rect class="guide-label-bg" x="134" y="331" width="216" height="45" rx="7"/>
+ <text class="guide-label" x="151" y="361">① 深色海浪看成主体</text>
+ <rect class="guide-label-bg" x="585" y="302" width="249" height="68" rx="7"/>
+ <text class="guide-label" x="602" y="330">② 浅色天空也有形状</text>
+ <text class="guide-label" x="602" y="356">沿亮线反过来看</text>
+ <rect class="guide-label-bg" x="318" y="496" width="224" height="43" rx="7"/>
+ <text class="guide-label" x="334" y="525">同一条边界，两种读法</text>
+ </svg>`;
+}
+
+const artColorRegions={
+ red:[[201,96,41,43],[294,96,64,79],[201,164,39,32],[637,266,80,73],[835,241,55,52],[188,490,72,58],[675,459,74,94],[820,719,50,37]],
+ blue:[[137,234,49,46],[852,148,50,31],[638,222,77,41],[638,337,77,28],[319,477,56,71],[139,645,46,44],[820,641,51,46]]
+};
+
+function colorGuideMarkup(a){
+ return `<svg class="art-guide color-guide" id="artGuide" hidden viewBox="0 0 1000 1000" preserveAspectRatio="none" role="img" aria-label="强调分散在画面各处的同色色块，叠加观察提示">
+ <defs>${Object.entries(artColorRegions).map(([color,regions])=>`<clipPath id="art-focus-${color}">${regions.map(([x,y,w,h])=>`<rect x="${x}" y="${y}" width="${w}" height="${h}"/>`).join('')}</clipPath>`).join('')}</defs>
+ ${Object.entries(artColorRegions).map(([color,regions])=>`<g class="color-group" data-color-group="${color}"${color==='blue'?' hidden':''}>
+ <image href="${a.image}" width="1000" height="1000" preserveAspectRatio="none" clip-path="url(#art-focus-${color})"/>
+ ${regions.map(([x,y,w,h])=>`<rect class="color-outline" x="${x-4}" y="${y-4}" width="${w+8}" height="${h+8}" rx="3"/>`).join('')}
+ <rect class="color-legend-bg" x="308" y="28" width="385" height="46" rx="7"/>
+ <text class="color-legend" x="330" y="58">寻找分散在不同位置的${color==='red'?'红色':'蓝色'}色块</text>
+ </g>`).join('')}
+ </svg>`;
+}
+
+function artGuideMarkup(a){
+ if(a.effect==='ground')return waveGuideMarkup();
+ if(a.effect==='similarity')return colorGuideMarkup(a);
+ return danceGuideMarkup();
+}
+
+function artGuideNote(a){
+ if(a.effect==='ground')return '先把深色海浪看成主体，再看浪内的浅色天空。蓝色线标出共用边缘，浅黄色强调天空占据的空间。提示是叠加的观察示意。';
+ if(a.effect==='similarity')return '保留几处代表性同色色块的原色，其余画面淡化。即使这些色块相隔很远，颜色相近仍让它们相互呼应。可切换红色、蓝色比较。';
+ return '黄色虚线沿舞者手臂提示环形运动，橙色圆圈突出局部连接。观察线是叠加的解读示意。';
+}
+
+function bindArtTools(a){
+ const image=$('#classicImage');
+ const button=$('#artEffect');
+ const guide=$('#artGuide');
+ const note=$('#artGuideNote');
+ let active=false;
+ image.onerror=()=>{
+   image.hidden=true;
+   $('#artFallback').hidden=false;
+   button.disabled=true;
+   document.querySelectorAll('[data-art-color]').forEach(control=>control.disabled=true);
+   guide.setAttribute('hidden','');
+   note.hidden=true;
+ };
+ const setActive=enabled=>{
+   active=enabled;
+   guide.toggleAttribute('hidden',!active);
+   note.hidden=!active;
+   $('#artImageBox').classList.toggle('guided',active);
+   image.classList.toggle('color-muted',active && a.effect==='similarity');
+   button.setAttribute('aria-pressed',String(active));
+   button.textContent=active?(a.effect==='guide'?'隐藏环形观察线':'还原作品'):a.effectText;
+   document.querySelectorAll('[data-art-color]').forEach(control=>{
+     const chosen=control.dataset.artColor===guide.dataset.color;
+     control.setAttribute('aria-pressed',String(active && chosen));
+   });
+ };
+ button.onclick=()=>setActive(!active);
+ if(a.effect==='similarity'){
+   guide.dataset.color='red';
+   document.querySelectorAll('[data-art-color]').forEach(control=>{
+     control.onclick=()=>{
+       const color=control.dataset.artColor;
+       guide.dataset.color=color;
+       guide.setAttribute('aria-label','强调分散在画面各处的'+(color==='red'?'红色':'蓝色')+'色块，叠加观察提示');
+       document.querySelectorAll('[data-color-group]').forEach(group=>group.toggleAttribute('hidden',group.dataset.colorGroup!==color));
+       setActive(true);
+     };
+   });
+ }
+}
+
+function renderArt(){const a=artWorks[artIndex];app.innerHTML=topIntro('艺术中的格式塔','把游戏里的发现，带回经典作品。')+`<div class="art-tabs">${artWorks.map((x,i)=>`<button class="subtle ${i===artIndex?'chosen':''}" data-art="${i}">0${i+1} · ${x.tag}</button>`).join('')}</div><section class="art-layout"><div class="art-visual"><div class="art-imagebox" id="artImageBox"><div class="art-imagecanvas"><img id="classicImage" src="${a.image}" alt="${a.artist}《${a.title}》原作">${artGuideMarkup(a)}</div><div id="artFallback" hidden><h2>《${a.title}》</h2><p>馆方图像暂时未能载入。</p><a href="${a.url}" target="_blank" rel="noopener">打开馆方原作 ↗</a></div></div><p class="guide-note" id="artGuideNote" hidden role="status">${artGuideNote(a)}</p><p class="art-credit">${a.caption}</p><div class="art-actions"><button class="subtle" id="artEffect" aria-pressed="false" aria-controls="artGuide artGuideNote">${a.effectText}</button>${a.effect==='similarity'?'<div class="art-color-controls" role="group" aria-label="选择要强调的颜色"><button class="subtle art-red" data-art-color="red" aria-pressed="false">强调红色</button><button class="subtle art-blue" data-art-color="blue" aria-pressed="false">强调蓝色</button></div>':''}<a class="source-link" href="${a.url}" target="_blank" rel="noopener">馆方原作与资料 ↗</a></div></div><div class="art-text"><p class="eyebrow">${a.en}</p><h2>《${a.title}》</h2><p class="art-meta">${a.artist} · ${a.date}<br>${a.museum}</p><p class="art-intro">${a.intro}</p><div class="art-question"><p class="eyebrow">LOOK · THINK · DISCOVER</p><p>${a.question}</p><div class="art-options">${a.options.map((v,i)=>`<button class="choice" data-art-answer="${i}">${v}</button>`).join('')}</div><div id="artFeedback" role="status"></div></div><p class="art-disclaimer">观察解读：借助格式塔原理分析观看效果，并非艺术家创作意图的定论。</p><button class="primary" id="artToGame">回到${roomNames[artIndex]} →</button></div></section>`;document.querySelectorAll('[data-art]').forEach(b=>b.onclick=()=>{artIndex=+b.dataset.art;renderArt()});bindArtTools(a);document.querySelectorAll('[data-art-answer]').forEach(b=>b.onclick=()=>{let correct=+b.dataset.artAnswer===a.answer;$('#artFeedback').innerHTML=correct?`<h3>你发现了作品中的联系。</h3><p>${a.explain}</p>`:'<p>再观察一下颜色、边界与人物之间的联系，也可以先试试左侧观察工具。</p>';b.classList.toggle('art-correct',correct)});$('#artToGame').onclick=()=>{room=artIndex;level=0;view='play';render()}}
 
 $('.brand').onclick=e=>{e.preventDefault();view='play';render()};$('#navPlay').onclick=()=>{view='play';render()};$('#navCollection').onclick=()=>{view='collection';render()};$('#navAbout').onclick=()=>{view='about';render()};$('#settingsBtn').onclick=()=>{$('#pieceSetting').value=settings.pieces;$('#noiseSetting').value=settings.noise;$('#pieceOut').textContent=settings.pieces;$('#noiseOut').textContent=settings.noise+'%';$('#settings').showModal()};$('#pieceSetting').oninput=e=>$('#pieceOut').textContent=e.target.value;$('#noiseSetting').oninput=e=>$('#noiseOut').textContent=e.target.value+'%';$('#settings').addEventListener('close',()=>{settings.pieces=+$('#pieceSetting').value;settings.noise=+$('#noiseSetting').value;persist();toast('设置已保存，重新开始当前题即可应用。')});
 
